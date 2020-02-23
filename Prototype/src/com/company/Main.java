@@ -20,7 +20,7 @@ public class Main {
         }
 
         //different hash code for each
-        heroes.forEach(iClonnable -> System.out.println(iClonnable.toString()));
+        heroes.spliterator().forEachRemaining(iClonnable -> System.out.println(iClonnable.toString()));
 
         var newHero = new Hero (20, 20, 20, 20);
         for (var x = 0 ; x < 30 ; x++){
@@ -28,7 +28,8 @@ public class Main {
         }
 
         //different hash code for each
-        heroes.forEach(iClonnable -> System.out.println(iClonnable.toString()));
+        heroes.spliterator().forEachRemaining(iClonnable -> System.out.println(iClonnable.toString()));
+
 
     }
 }
